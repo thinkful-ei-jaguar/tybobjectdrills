@@ -43,11 +43,13 @@ let employeeRecord = [
     {
         name: 'Jane Austen',
         jobTitle: 'Author',
+        boss: 'herself',
     }
     ,
     {
         name: 'C-3P0',
-        jobTitle: 'Human-Cyborg Relations',
+        jobTitle: 'Protocol Droid',
+        boss: 'R2-D2',
     }
     ,
     {
@@ -58,20 +60,28 @@ let employeeRecord = [
     {
         name: 'Ted Moseby',
         jobTitle: 'Architect',
+        boss: 'Drummond',
     }
     ,    
     {
         name: 'Bilbo Baggins',
         jobTitle: 'Thief',
+        boss: 'Thorin Oakenshield',
     }
 ];
 
 function jobReport (arr) {
     for (let i = 0; i < arr.length; i++) {
         return arr.map(function(item){
-            return `${item.name}: ${item.jobTitle}`;
+            if (item.boss === undefined) {
+                return `${item.jobTitle} ${item.name} doesn't report to anybody.`;
+            }
+            return `${item.jobTitle} ${item.name} reports to ${item.boss}.`;
         })
     } 
 }
 
 console.log(jobReport(employeeRecord));
+
+//exercise 5 is above
+
