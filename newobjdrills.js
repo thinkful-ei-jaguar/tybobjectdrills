@@ -35,5 +35,43 @@ let menu = {
     meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'],
 }
 
-console.log(menu.meals[3]);
+//console.log(menu.meals[3]);
 
+//exercise 4
+
+let employeeRecord = [
+    {
+        name: 'Jane Austen',
+        jobTitle: 'Author',
+    }
+    ,
+    {
+        name: 'C-3P0',
+        jobTitle: 'Human-Cyborg Relations',
+    }
+    ,
+    {
+        name: 'Macavity',
+        jobTitle: 'The Mystery Cat',
+    }
+    ,
+    {
+        name: 'Ted Moseby',
+        jobTitle: 'Architect',
+    }
+    ,    
+    {
+        name: 'Bilbo Baggins',
+        jobTitle: 'Thief',
+    }
+];
+
+function jobReport (arr) {
+    for (let i = 0; i < arr.length; i++) {
+        return arr.map(function(item){
+            return `${item.name}: ${item.jobTitle}`;
+        })
+    } 
+}
+
+console.log(jobReport(employeeRecord));
