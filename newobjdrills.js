@@ -11,9 +11,9 @@ let loaf = {
 
 };
 
-console.log(loaf);
+//console.log(loaf);
 
-console.log(loaf.hydration());
+//console.log(loaf.hydration());
 
 //exercise 2
 
@@ -25,6 +25,15 @@ const fillerWords = {
     spam: 'why do you exist?',
 }
 
-for (const key in fillerWords) {
-    console.log(`${key}, ${fillerWords[key]}`);
+//for (const key in fillerWords) {
+    //console.log(`${key}, ${fillerWords[key]}`);
+//}
+
+//exercise 3 YAY hobbit themed objects FTW!
+
+let menu = {
+    meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'],
 }
+
+console.log(menu.meals[3]);
+
